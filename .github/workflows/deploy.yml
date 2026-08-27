@@ -36,10 +36,10 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile --filter .
 
       - name: Build
-        run: pnpm build
+        run: pnpm build --filter .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
